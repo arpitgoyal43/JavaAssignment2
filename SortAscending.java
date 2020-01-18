@@ -2,24 +2,27 @@ package com.company;
 
 import java.util.Scanner;
 
+import static com.company.Utils.println;
+import static com.company.Utils.print;
+
 public class SortAscending {
     public static void main(String[] args) {
         try {
             Scanner input = new Scanner(System.in);
-            System.out.println("Enter number of elements in array: ");
+            println("Enter number of elements in array: ");
             int arraySet_size = input.nextInt();
             // Integer array declaration
             int[] arraySet = new int[arraySet_size];
-            System.out.println("Enter the elements in a sequence: ");
+            println("Enter the elements in a sequence: ");
             for (int i = 0; i < arraySet_size; i++) {
                 arraySet[i] = input.nextInt();
             }
-            System.out.println("Current array: ");
+            println("Current array: ");
             // Enhanced for loop to print the elements in an array
-            for (int i : arraySet) System.out.print(i + " ");
+            for (int i : arraySet) print(i + " ");
             //  Check for the size of array if less than 2, then it is already sorted
             if (arraySet.length < 2) {
-                System.out.println("\nSorted Array: " + arraySet[0]);
+                println("\nSorted Array: " + arraySet[0]);
             } else {
                 // Object of SortAscending class to call instance method
                 SortAscending sortAscendingArray = new SortAscending();
@@ -27,7 +30,7 @@ public class SortAscending {
                 sortAscendingArray.sortArray(arraySet);
             }
         } catch (Exception e) {
-            System.out.println("Please enter a valid number!");
+            println("Please enter a valid number!");
         }
 
     }
@@ -49,8 +52,8 @@ public class SortAscending {
                 }
             }
         }
-        System.out.println("\nSorted array in ascending order: ");
+        println("\nSorted array in ascending order: ");
         /* Enhanced for loop to print the elements in an array */
-        for (int i : arraySet) System.out.print(i + " ");
+        for (int i : arraySet) print(i + " ");
     }
 }
