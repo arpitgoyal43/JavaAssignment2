@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 import static com.company.Utils.println;
@@ -31,7 +32,7 @@ public class CountVowelConsonant {
             alphabet = checkString[i];
             if (alphabet == 'a' || alphabet == 'e' || alphabet == 'i' || alphabet == 'o' || alphabet == 'u' || alphabet == 'A' || alphabet == 'I' || alphabet == 'E' || alphabet == 'O' || alphabet == 'U')
                 countVowel++;
-            else if (alphabet != ' ' || alphabet != '1' || alphabet != '2' || alphabet != '3' || alphabet != '4' || alphabet != '5' || alphabet != '6' || alphabet != '7' || alphabet != '8' || alphabet != '9' || alphabet != '0')
+            else if (alphabet >= 'a' && alphabet <= 'z' || alphabet >='A' && alphabet<='Z' )
                 countConsonant++;
         }
         println("Number of vowels and consonant:\n" + countVowel + "\n" + countConsonant);
