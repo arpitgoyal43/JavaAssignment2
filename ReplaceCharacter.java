@@ -14,11 +14,12 @@ public class ReplaceCharacter {
         println("Enter new character: ");
         char newchar = input.next().charAt(0);
         // replaceChar() method returns either null or a required string
-        if (replaceChar(word, oldchar, newchar) == null)
+        String result = replaceChar(word, oldchar, newchar);
+        if (result == null)
             println("No character to replace!");
         else
             // calling replaceChar() method to return new string
-            println("New word: \n" + replaceChar(word, oldchar, newchar));
+            println("New word: \n" + result);
     }
 
     /*
