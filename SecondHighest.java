@@ -19,8 +19,8 @@ public class SecondHighest {
             } else if (arraySet[i] > secondMaximum && arraySet[i] < firstMaximum) {
                 secondMaximum = arraySet[i];
             }
-            println("Second Highest number: " + secondMaximum);
         }
+        println("Second Highest number: " + secondMaximum);
     }
 
     public static void main(String[] args) {
