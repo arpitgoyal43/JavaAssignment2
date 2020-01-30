@@ -36,9 +36,14 @@ public class DuplicateElements {
     Output: Print only duplicate elements
      */
     public static void printDuplicate(int[] arraySet) {
-        for (int i = 0; i < arraySet.length; i++)
-            for (int j = i + 1; j < arraySet.length; j++)
-                if (arraySet[i] == arraySet[j])
-                    print(arraySet[j] + ",");
+        for (int i = 0; i < arraySet.length; i++) {
+            int count=0;
+            for (int j = i + 1; j < arraySet.length; j++) {
+                if ((arraySet[i] == arraySet[j] && (i != j)))
+                    count++;
+            }
+            if(count==1)
+                println(arraySet[i]);
+        }
     }
 }
