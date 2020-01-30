@@ -3,7 +3,6 @@ package com.company;
 import java.util.Scanner;
 
 import static com.company.Utils.println;
-import static com.company.Utils.print;
 
 public class RemoveWhiteSpace {
 
@@ -12,10 +11,13 @@ public class RemoveWhiteSpace {
         Input: character array containing all the elements of an string
         Output: print the string without any whiteSpace
          */
-    static void removeWhiteSpace(char[] inputStringArray) {
-        for (char stringChar : inputStringArray)
-            if (stringChar != ' ')
-                print(stringChar);
+    static String removeWhiteSpace(char[] inputStringArray) {
+        StringBuffer stringBuffer = new StringBuffer();
+        for (int i = 0; i < inputStringArray.length; i++) {
+            if (inputStringArray[i] != ' ')
+                stringBuffer.append(inputStringArray[i]);
+        }
+        return stringBuffer.toString();
     }
 
     public static void main(String[] args) {
@@ -25,6 +27,7 @@ public class RemoveWhiteSpace {
         // converting an string into character array
         char[] inputStringArray = inputString.toCharArray();
         // calling an static method: removeWhiteSpace([input charArray]);
-        removeWhiteSpace(inputStringArray);
+        String result = removeWhiteSpace(inputStringArray);
+        println("New String: \n" + result);
     }
 }
